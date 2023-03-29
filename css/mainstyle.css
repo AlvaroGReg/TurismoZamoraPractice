@@ -1,0 +1,280 @@
+:root {
+
+    --font-color: #fbff8b;
+    --shade: #24242472;
+    --shade-strong: #000000e5;
+    --primary: #050029;
+    --shade-light: #ffffff32;
+
+}
+
+@font-face {
+    font-family: 'pubg_sansregular';
+    src: url('../res/font/pubg_sans-webfont.woff2') format('woff2'),
+        url('../res/font/pubg_sans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+p {
+    color: var(--font-color);
+    font-family: 'calibri';
+}
+
+a {
+    cursor: pointer;
+    color: var(--font-color);
+}
+
+.bx {
+    color: var(--font-color);
+}
+
+/*MAIN HEADER*/
+.header {
+    height: 10vh;
+    background-image: url('../res/1080-capital.jpg');
+    display: flex;
+    justify-content: center;
+}
+
+.maintitle{
+    margin-top: 0.2ex;
+    font-size: 3em;
+    font-family: "pubg_sansregular";
+}
+.navM {
+    position: fixed;
+    width: 80%;
+    top: 3em;
+    left: -150%;
+    transition: 0.6s;
+    z-index: 10;
+    background-color: var(--shade-strong);
+}
+
+/* Show menu */
+.show-menu {
+    left: 0;
+}
+
+.bx-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 3em;
+    z-index: 11;
+}
+
+.mainmenulist {
+    margin-left: 1ex;
+}
+
+.mainmenuitem {
+    position: relative;
+}
+
+.titlediv {
+    position: relative;
+    display: flex;
+}
+
+.mainmenutxt {
+    font-family: "pubg_sansregular";
+    font-size: 1.6em;
+}
+
+.bx-chevrons-down {}
+
+.mainmenutitle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.submenucontainer {
+    position: relative;
+    margin: 0.5ex;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/*MAKE CONTAINER VISIBLE AGAIN*/
+.navM .mainmenutitle.active .capicontainer {
+    height: 120px;
+}
+
+.navM .mainmenutitle.active .provinciacontainer {
+    height: 140px;
+}
+
+.navM .mainmenutitle.active .gastrocontainer {
+    height: 50px;
+}
+
+.navM .mainmenutitle.active .enoturismocontainer {
+    height: 95px;
+}
+
+.submenulist {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.subitemlist {
+    position: relative;
+}
+
+.itemtxt {
+    font-size: 1.2em;
+}
+
+/*MAIN BODY*/
+body {}
+
+.mainsection {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.714)), url('../res/1080-capital.jpg');
+    background-attachment: fixed;
+}
+
+/*FOOTER*/
+
+.mainfooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.825), rgba(0, 0, 0, 0.854)), url('../res/1080-capital.jpg');
+    background-position: 40%;
+
+}
+
+.footerlist {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footermenuitem {}
+
+.footermenutxt {
+    font-size: 0.8em;
+
+}
+
+/*SUBPAGES*/
+.subpagebody {}
+
+.listcontainer {
+}
+
+.subpagelists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.listtop {
+    margin: auto;
+    cursor: pointer;
+}
+
+.subpagelistitem {
+    position: relative;
+    display: flex;
+}
+
+.itemimgdiv {
+}
+
+.subitemtxt {
+    position: absolute;
+    background-color: var(--shade);
+    width: 100%;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.itembottom {}
+
+.itembottom {}
+
+.itemimg {
+    height: 150px;
+    width: 150px;
+}
+
+/* DESPLEGABLE DATA */
+
+.datadiv{
+    position: fixed;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.8s;
+    background-color: var(--shade-strong);
+    z-index: 19;
+    text-align: center;
+    display: block;
+}
+
+.expanded{
+    height: 80vh;
+    width: 90vw;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.dataimg {
+    width: 95%;
+}
+
+.bx-x{
+    display: none;
+    position: fixed;
+    top: 12%;
+    right: 8%;
+    color: var(--font-color);
+    font-size: 2.5em;
+    background-color: var(--shade-light);
+    z-index: 20;
+}
+
+.listcontainer .datadiv.expanded .bx-x {
+    display: block;
+}
+
+.dataname {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 800;
+    margin: 1ex;
+}
+
+.datadescription {
+    text-align: justify;
+    margin: 1ex;
+}
+
+.dataweb {
+    font-size: 1.2em;
+}
+
+.mapiframe {}

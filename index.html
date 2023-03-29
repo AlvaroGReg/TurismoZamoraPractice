@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo en Zamora</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/mainstyle.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="navToggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div class="navM" id="nav-menu">
+                <ul class="mainmenulist">
+                    <li class="mainmenuitem" onclick="loadPage('pages/intro.html')">
+                        <div class="mainmenutitle">
+                            <p class="mainmenutxt">INTRODUCCION</p>
+                        </div>
+                    </li>
+
+                    <li class="mainmenuitem">
+                        <div class="mainmenutitle">
+                            <div class="titlediv">
+                                <p class="mainmenutxt">ZAMORA CAPITAL</p>
+                                <i class='bx bx-chevrons-down'></i>
+                            </div>
+                            <div class="submenucontainer capicontainer">
+                                <ul class="submenulist">
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'museos')">
+                                            Museos</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'romanico')">
+                                            Románico</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'modernismo')">
+                                            Modernismo</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'rutas')">
+                                            Rutas</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'noche')">
+                                            La noche</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="mainmenuitem">
+                        <div class="mainmenutitle">
+                            <div class="titlediv">
+                                <p class="mainmenutxt">ZAMORA PROVINCIA</p>
+                                <i class='bx bx-chevrons-down'></i>
+                            </div>
+                            <div class="submenucontainer provinciacontainer">
+                                <ul class="submenulist">
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'benavente')">
+                                            Benavente</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'toro')">
+                                            Toro y alfoz</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'arribes')">
+                                            Arribes</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'sanabria')">
+                                            Sanabria</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'culebra')">
+                                            La Sierra de la Culebra</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'villafafila')">
+                                            Villafáfila</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mainmenuitem">
+                        <div class="mainmenutitle">
+                            <div class="titlediv">
+                                <p class="mainmenutxt">GASTRONOMÍA</p>
+                                <i class='bx bx-chevrons-down'></i>
+                            </div>
+                            <div class="submenucontainer gastrocontainer">
+                                <ul class="submenulist">
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'platos')">
+                                            Platos típicos</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'postres')">
+                                            Postres y dulces</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mainmenuitem">
+                        <div class="mainmenutitle">
+                            <div class="titlediv">
+                                <p class="mainmenutxt">ENOTURISMO</p>
+                                <i class='bx bx-chevrons-down'></i>
+                            </div>
+                            <div class="submenucontainer enoturismocontainer">
+                                <ul class="submenulist">
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'torovino')">
+                                            Toro</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'arribesvino')">
+                                            Arribes</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'tierradevino')">
+                                            Tierra del Vino</p>
+                                    </li>
+                                    <li class="subitemlist">
+                                        <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'valles')">
+                                            Valles de Benavente</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <p class="maintitle">ZAMORA</p>
+    </header>
+
+    <main class="mainsection" id="main"></main>
+
+    <footer class="mainfooter" id="footer">
+
+        <ul class="footerlist">
+            <li class="footermenuitem"><a onclick="loadPage('pages/enlaces.html')">
+                    <p class="footermenutxt">Enlaces de interés</p>
+                </a></li>
+
+            <li class="footermenuitem"><a onclick="loadPage('pages/contacto.html')">
+                    <p class="footermenutxt">Contacto y aviso legal</p>
+                </a></li>
+        </ul>
+    </footer>
+</body>
+<script src="data/data.js"></script>
+<script src="js/loadSubmenuItems.js"></script>
+<script src="js/nav.js"></script>
+<script>
+    window.onload = () => {
+        loadPage("pages/intro.html")
+
+        let accordion = document.getElementsByClassName('titlediv');
+        
+        Array.from(accordion).forEach(element => {
+            element.addEventListener('click', function () {
+                element.parentElement.classList.toggle('active');
+            })
+        });
+    }
+</script>
+
+</html>
