@@ -4,7 +4,7 @@
     --shade: #24242472;
     --shade-strong: #000000e5;
     --primary: #050029;
-    --shade-light: #ffffff32;
+    --shade-light: #ffffff4c;
 
 }
 
@@ -45,25 +45,28 @@ a {
 
 /*MAIN HEADER*/
 .header {
+    position: relative;
     height: 10vh;
     background-image: url('../res/1080-capital.jpg');
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.maintitle{
+.maintitletxt {
     margin-top: 0.2ex;
-    font-size: 3em;
+    font-size: calc(50px + 2vw);
     font-family: "pubg_sansregular";
 }
+
 .navM {
-    position: fixed;
+    position: absolute;
     width: 80%;
-    top: 3em;
+    height: 80vh;
     left: -150%;
     transition: 0.6s;
-    z-index: 10;
-    background-color: var(--shade-strong);
+    z-index: 100;
+    background-color: var(--primary);
 }
 
 /* Show menu */
@@ -75,12 +78,13 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    font-size: 3em;
+    font-size: calc(30px + 10vw);
     z-index: 11;
 }
 
 .mainmenulist {
     margin-left: 1ex;
+    height: 80vh;
 }
 
 .mainmenuitem {
@@ -94,10 +98,13 @@ a {
 
 .mainmenutxt {
     font-family: "pubg_sansregular";
-    font-size: 1.6em;
+    font-size: calc(5px + 4vw);
+    white-space: nowrap;
 }
 
-.bx-chevrons-down {}
+.bx-chevrons-down {
+    font-size: 2vw;
+}
 
 .mainmenutitle {
     position: relative;
@@ -109,31 +116,34 @@ a {
     position: relative;
     margin: 0.5ex;
     height: 0;
+    width: 65%;
     overflow: hidden;
     transition: 0.5s;
+    background-color: var(--shade-light);
 }
 
 /*MAKE CONTAINER VISIBLE AGAIN*/
 .navM .mainmenutitle.active .capicontainer {
-    height: 120px;
+    height: 17vw
 }
 
 .navM .mainmenutitle.active .provinciacontainer {
-    height: 140px;
+    height: 20vw
 }
 
 .navM .mainmenutitle.active .gastrocontainer {
-    height: 50px;
+    height: 7vw;
 }
 
 .navM .mainmenutitle.active .enoturismocontainer {
-    height: 95px;
+    height: 14vw;
 }
 
 .submenulist {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 30vh;
 }
 
 .subitemlist {
@@ -141,14 +151,15 @@ a {
 }
 
 .itemtxt {
-    font-size: 1.2em;
+    font-size: calc(3px + 2vw);
+    white-space: nowrap;
+    width: 100%;
 }
 
 /*MAIN BODY*/
-body {}
 
 .mainsection {
-    min-height: 100vh;
+    min-height: 90vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.714)), url('../res/1080-capital.jpg');
     background-attachment: fixed;
 }
@@ -175,20 +186,17 @@ body {}
 .footermenuitem {}
 
 .footermenutxt {
-    font-size: 0.8em;
-
+    font-size: calc(5px + 1vw);
 }
 
 /*SUBPAGES*/
-.subpagebody {}
 
-.listcontainer {
-}
 
 .subpagelists {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 1ex;
 }
 
 .listtop {
@@ -201,29 +209,26 @@ body {}
     display: flex;
 }
 
-.itemimgdiv {
-}
+.itemimgdiv {}
 
 .subitemtxt {
     position: absolute;
     background-color: var(--shade);
     width: 100%;
-    font-size: 0.8em;
+    font-size: calc(5px + 2vw);
     text-align: center;
 }
 
-.itembottom {}
-
-.itembottom {}
-
 .itemimg {
-    height: 150px;
-    width: 150px;
+    height: 48vw;
+    width: 48vw;
+    max-width: 512px;
+    max-height: 512px;
 }
 
 /* DESPLEGABLE DATA */
 
-.datadiv{
+.datadiv {
     position: fixed;
     height: 0;
     width: 0;
@@ -235,25 +240,25 @@ body {}
     display: block;
 }
 
-.expanded{
+.expanded {
     height: 80vh;
-    width: 90vw;
+    width: 100vw;
     overflow: scroll;
     overflow-x: hidden;
 }
 
 .dataimg {
-    width: 95%;
+    width: 100%;
 }
 
-.bx-x{
+.bx-x {
     display: none;
     position: fixed;
-    top: 12%;
-    right: 8%;
+    top: 16vh;
+    left: 0;
     color: var(--font-color);
     font-size: 2.5em;
-    background-color: var(--shade-light);
+    background-color: var(--shade);
     z-index: 20;
 }
 
@@ -262,7 +267,7 @@ body {}
 }
 
 .dataname {
-    font-size: 1.2em;
+    font-size: calc(20px + 2vw);
     text-align: center;
     font-weight: 800;
     margin: 1ex;
@@ -270,11 +275,120 @@ body {}
 
 .datadescription {
     text-align: justify;
+    font-size: calc(8px + 1vw);
     margin: 1ex;
 }
 
 .dataweb {
-    font-size: 1.2em;
+    font-size: calc(10px + 2vw);
 }
 
-.mapiframe {}
+.mapiframe {
+    width: 70%;
+    height: 40vw;
+}
+
+/*RESPONSIVE MEDIA QUERY*/
+
+@media (min-width: 720px) {
+
+    .header{
+        height: 15vh;
+    }
+
+    .navM {
+        position: relative;
+        width: 100%;
+        left: 0;
+        margin-bottom: 0;
+        height: calc(7px + 3vw);
+        background-color: transparent;
+    }
+
+    .mainmenulist {
+        display: flex;
+        margin: 0;
+        width: 100vw;
+        height: 5vw;
+        justify-content: space-evenly;
+    }
+
+    .mainmenutxt {
+        font-size: calc(15px + 1.5vw);
+    }
+
+    .mainmenuitem {
+        margin-top: 1ex;
+    }
+
+    .submenucontainer {
+        position: absolute;
+        margin-top: 3.2vw;
+        width: fit-content;
+        background-color: var(--shade-strong);
+    }
+
+    .enoturismocontainer {
+        translate: -3rem 0;
+        text-align: right;
+    }
+
+    /*MAKE CONTAINER VISIBLE AGAIN*/
+    .navM .mainmenutitle.active .capicontainer {
+        height: 16vw;
+    }
+
+    .navM .mainmenutitle.active .provinciacontainer {
+        height: 19vw;
+    }
+
+    .navM .mainmenutitle.active .gastrocontainer {
+        height: 6vw;
+    }
+
+    .navM .mainmenutitle.active .enoturismocontainer {
+        height: 13vw;
+    }
+
+    .submenulist {
+        width: auto;
+    }
+
+    .bx-menu {
+        display: none;
+    }
+
+    .bx-chevrons-down {
+
+    }
+
+    .titlediv {
+        width: fit-content;
+    }
+
+    .mainmenutitle.active {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .datadiv {
+        position: fixed;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        transition: 0.8s;
+        background-color: var(--shade-strong);
+        z-index: 19;
+        text-align: center;
+        display: block;
+    }
+    
+    .expanded {
+        height: 80vh;
+        width: 100vw;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    
+}

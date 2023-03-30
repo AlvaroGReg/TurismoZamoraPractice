@@ -13,6 +13,9 @@
 <body>
 
     <header class="header" id="header">
+
+        <p class="maintitletxt">ZAMORA</p>
+
         <nav class="nav container">
             <div class="navToggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
@@ -26,7 +29,7 @@
                         </div>
                     </li>
 
-                    <li class="mainmenuitem">
+                    <li class="mainmenuitem capitem">
                         <div class="mainmenutitle">
                             <div class="titlediv">
                                 <p class="mainmenutxt">ZAMORA CAPITAL</p>
@@ -85,7 +88,7 @@
                                     </li>
                                     <li class="subitemlist">
                                         <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'culebra')">
-                                            La Sierra de la Culebra</p>
+                                            Sierra de la Culebra</p>
                                     </li>
                                     <li class="subitemlist">
                                         <p class="itemtxt" onclick="loadSubPage('../subpages.html', 'villafafila')">
@@ -146,7 +149,7 @@
                 </ul>
             </div>
         </nav>
-        <p class="maintitle">ZAMORA</p>
+
     </header>
 
     <main class="mainsection" id="main"></main>
@@ -172,11 +175,18 @@
         loadPage("pages/intro.html")
 
         let accordion = document.getElementsByClassName('titlediv');
-        
+
         Array.from(accordion).forEach(element => {
+
             element.addEventListener('click', function () {
                 element.parentElement.classList.toggle('active');
-            })
+            });
+        });
+
+        let widthAccordion = document.getElementsByClassName('mainmenuitem');
+
+        Array.from(widthAccordion).forEach(element => {
+
         });
     }
 </script>

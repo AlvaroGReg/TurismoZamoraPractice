@@ -75,7 +75,9 @@ function loadData(list) {
             newDataDiv.appendChild(dataMap);
         }
 
-
+        let newBr = document.createElement('br');
+        newDataDiv.appendChild(newBr);
+        
         newDataDiv.appendChild(dataWeb);
 
     });
